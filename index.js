@@ -4,18 +4,26 @@ function takeANumber(katzDeliLine, name){
   katzDeliLine.push(name)
   return (`Welcome, ${name}. You are number ${katzDeliLine.length} in line.`);
 }
+let number=0;
+function giveNumber(katzDeliLine){
+  
+    katzDeliLine.push(number+1);
+    number++
+    return (`You are number ${number}.`)
+    
+}
 
-function nowServing(katzDeli) {
+function nowServing(katzDeliLine) {
   let i = 0;
-  while (i < katzDeli.length) {
+  while (i < katzDeliLine.length) {
     i++;
   }
-  if (katzDeli.length === 0) {
+  if (katzDeliLine.length === 0) {
     return "There is nobody waiting to be served!";
   }
-  else
-  return (`Currently serving ${katzDeli.shift()}.`);
-
+  else{
+  return (`Currently serving ${katzDeliLine.shift()}.`);
+}
 }
 var line =[];
 function currentLine(katzDeliLine){
